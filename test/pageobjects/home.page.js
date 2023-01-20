@@ -10,7 +10,11 @@ class HomePage extends Page {
      * define selectors using getter methods
      */
 
-    get btnSubmit () {
+    get btnLogin(){
+        return $('.landing-header__button');
+    }
+
+    get btnEnterSpace () {
         return $('button[type="submit"]');
     }
 
@@ -18,8 +22,12 @@ class HomePage extends Page {
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
      */
-    async submit () {
-        await this.btnSubmit.click();
+    async enterSpacePage () {
+        await this.btnEnterSpace.click();
+    }
+
+    async enterLoginPage () {
+        await this.btnLogin.click();
     }
 
     /**
